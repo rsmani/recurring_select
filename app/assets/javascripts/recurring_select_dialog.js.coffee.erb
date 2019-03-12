@@ -31,7 +31,7 @@ window.RecurringSelectDialog =
       if dialog_height < 80
         dialog_height = 80
       margin_top = (window_height - dialog_height)/2 - 30
-      margin_top = 10 if margin_top < 10
+      margin_top = 90 if margin_top < 10
       # if dialog_height > window_height - 20
       #   dialog_height = window_height - 20
 
@@ -308,7 +308,7 @@ window.RecurringSelectDialog =
             <h1>#{$.fn.recurring_select.texts["repeat"]} <a href='#' title='#{$.fn.recurring_select.texts["cancel"]}' Alt='#{$.fn.recurring_select.texts["cancel"]}'></a> </h1>
             <p class='frequency-select-wrapper'>
               <label for='rs_frequency'>#{$.fn.recurring_select.texts["frequency"]}:</label>
-              <select data-wrapper-class='ui-recurring-select' id='rs_frequency' class='rs_frequency' name='rs_frequency'>
+              <select data-wrapper-class='ui-recurring-select' id='rs_frequency' class='rs_frequency browser-default' name='rs_frequency'>
                 <option value='Daily'>#{$.fn.recurring_select.texts["daily"]}</option>
                 <option value='Weekly'>#{$.fn.recurring_select.texts["weekly"]}</option>
                 <option value='Monthly'>#{$.fn.recurring_select.texts["monthly"]}</option>
@@ -346,8 +346,8 @@ window.RecurringSelectDialog =
                 #{$.fn.recurring_select.texts["months"]}:
               </p>
               <p class='monthly_rule_type'>
-                <span><label for='monthly_rule_type_day'>#{$.fn.recurring_select.texts["day_of_month"]}</label><input type='radio' class='monthly_rule_type_day' name='monthly_rule_type' id='monthly_rule_type_day' value='true' /></span>
-                <span><label for='monthly_rule_type_week'>#{$.fn.recurring_select.texts["day_of_week"]}</label><input type='radio' class='monthly_rule_type_week' name='monthly_rule_type' id='monthly_rule_type_week' value='true' /></span>
+                <span><input type='radio' class='monthly_rule_type_day  browser-default' name='monthly_rule_type' id='monthly_rule_type_day' value='true' /><label for='monthly_rule_type_day'>#{$.fn.recurring_select.texts["day_of_month"]}</label></span>
+                <span><input type='radio' class='monthly_rule_type_week  browser-default' name='monthly_rule_type' id='monthly_rule_type_week' value='true' /><label for='monthly_rule_type_week'>#{$.fn.recurring_select.texts["day_of_week"]}</label></span>
               </p>
               <p class='rs_calendar_day'></p>
               <p class='rs_calendar_week'></p>
